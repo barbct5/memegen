@@ -4,6 +4,5 @@ otp_release:
   - 18.0
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -y build-essential git
-  - sudo dpkg -i imagemagick-6.9.1_10-1_amd64.deb
+  - sudo apt-get install -y build-essential git pkg-config libmagickwand-dev
 script: "./rebar3 as prod tar"
