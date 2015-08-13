@@ -11,7 +11,7 @@ LDFLAGS=`pkg-config --libs MagickWand`
 .PHONY: clean
 
 $(C_SRC_OUTPUT): memegen.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+	$(CC) -o $@ $< $(CFLAGS) $(LDFLAGS)
 
 clean:
 	@rm -f $(C_SRC_OUTPUT)
